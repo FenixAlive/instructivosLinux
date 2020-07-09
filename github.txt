@@ -1,0 +1,10 @@
+-cuando haya conflictos abrir el archivo con conflicto y ver la linea que diga HEAD y la otra, ver cual de las dos tiene el conflicto, eliminar la que no quiera y entonces si hacer push o pull
+-agregar cuenta ssh en local:
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+-cambiar repo de https: a ssh:
+1-ver el repo con git remote -v
+2- cambiar el repo con el siguiente comando: 
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git

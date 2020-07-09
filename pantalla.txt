@@ -1,0 +1,8 @@
+#muestra modos disponibles
+xrandr 
+# se tiene HDMI-1, LVDS-1, VGA-1
+#EJEMPLO
+xrandr --output HDMI-1 --mode 1680x1050 --output LVDS-1 --off
+#EJEMPLO 2 
+xrandr --output HDMI-1 --off --output LVDS-1 --auto
+

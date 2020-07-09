@@ -1,0 +1,34 @@
+#general
+ip link :vista general
+ip address :vista especifica
+ip link set interface up | down
+#ethernet
+correr al iniciar la computadora dhcpcd para asignar ip a computadora
+
+#wifi
+iw dev interface scan | less #busca las redes disponibles
+#para clave wpa
+wpa_supplicant -B -i interface -c /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_cli
+una vez dentro poner los comandos:
+scan
+scan_results
+add_network #da un numero
+set_network numero ssid "missid"
+set_network numero psk "pass"
+enable_network numero
+save_config
+quit
+#ahora asigno ip
+dhcpcd
+
+#nueva forma con wifi-menu netctl
+#los perfiles se guardan en /etc/netctl/
+#ver perfiles
+netctl list
+#habilitar perfil
+netctl enable <perfil>
+#desabilitar perfil
+netctl disable <perfil>
+#conectarse por primera vez y crear perfil
+wifi-menu
