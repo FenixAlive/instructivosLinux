@@ -1,0 +1,14 @@
+#buscar red:
+nmcli device wifi list
+#conectarme
+nmcli device wifi connect <SSID> password <pass>
+#checar estatus
+nmcli device
+#desconectarme
+nmcli device disconnect <interface>
+#edit conection
+/etc/NetworkManager/system-connection
+#reload after changes
+nmcli connection reload
+#interactive
+nmtui
