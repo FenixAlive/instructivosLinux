@@ -1,0 +1,20 @@
+ instalar bluez y bluez-utils
+ habilitar servicio bluetooth
+ ver que rfkill no tenga hard ni soft blocked con comando:
+ rfkill list
+ -si esta soft blocked correr:
+ sudo rfkill unblock bluetooth
+-si esta hard blocked necesitas ver el boton fisico del equipo
+ entrar a sudo bluetoothctl
+ power on
+ scan on
+ pair y oner mac
+ connect mac
+
+ si tengo error matar pulseaudio
+ pulseaudio -k
+ iniciar pulseaudio con pulseaudio o pulseaudio --start
+ cambiar el audio hacia la bocina con pavucontrol
+
+ si quiero conectarlo siempre:
+ trust mac

@@ -1,0 +1,14 @@
+#hay una carpeta con archivos para manipular el brillo
+ls /sys/class/backlight/
+#ver el nombre de la carpeta y si no se llama acpi_video0 cambiarlo:
+#el maximo
+cat /sys/class/backlight/acpi_video0/max_brightness
+#el actual
+/sys/class/backlight/acpi_video0/brightness
+#para modificarlo sin ser superusuario agregar al usuario al grupo video y agregar lo siguiente:
+/etc/udev/rules.d/backlight.rules
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="acpi_video0", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness"
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="acpi_video0", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
+#apagar la pantalla como para salvar energia
+xset dpms force off
+#

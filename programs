@@ -1,0 +1,7 @@
+wm=leftwm o dwm
+bar=polybar?
+lock=slock
+menu=dmenu
+browser=vimb
+file_manager=vifm
+editor=vim

@@ -1,0 +1,6 @@
+https://us.download.nvidia.com/XFree86/Linux-x86_64/450.57/README/randr14.html
+#la pagina de arriba realmente no la utilice, lo importante era tener bien el archivo xorg.conf como se tiene en la carpeta
+#listar proveedores:
+xrandr --listproviders
+cambiar de pantalla
+xrandr --output HDMI-1-0 --auto
